@@ -39,6 +39,8 @@ def getdata():
       
       # Berechung des Sättigungs-Dampfdrucks 
       # saturationVapourPressure (sVP) = Sättigungsdampfdruck 
+
+
     
       # Durschnittstemperatur der Luft: 
       Tmit = round(((T+Tamb)/2),2) 
@@ -46,17 +48,18 @@ def getdata():
       sVP = c * pow(10, ((Tmit * a) / (Tmit + b)))
       print("Das ist der Sättigungs-Dampfdrucks :", sVP)
 
+    
       # Berechnung des Dampfdrucks (vapourPressure)
       VP = ( (Hum * sVP) / 100)  
       print("Das ist der VP:", VP)
 
-
+    
       # Dewpoint - Taupunkt (Tau)
       v = math.log10(VP / c) 
       Tau = round(( b * v / (a - v) ), 2)
       print("Das ist der Dewpoint:", Tau)
 
-      
+    
       #Berechnung - Cloud couverage   
       #K1 Werte ändern, wenn die Funktion des Graphen nicht konstant bleibt (siehe Opensensemap)
       if Tamb >= 30:
