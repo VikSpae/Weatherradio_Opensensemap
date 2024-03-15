@@ -111,7 +111,7 @@ def getdata():
       print('Das ist der Bewölkungsgrad:', Bew)
 
       # eigener Versuch Regenwahrscheinlichkeit zu berechnen:
-      Rain = ((Bew/Tau)) #vorherige Idee: /(Tau*Bew)/100)
+      Rain = round(((Bew/Tau)),2) #vorherige Idee: /(Tau*Bew)/100)
       print("Regenwahrscheinlichkeit:", Rain)
 
       # zweiter Ansatz für die Berechnung der Himmelstemperatur: 
