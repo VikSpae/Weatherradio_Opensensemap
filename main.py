@@ -1,3 +1,5 @@
+import turtle
+
 import json
 import requests
 import numpy as np
@@ -6,6 +8,8 @@ from datetime import time
 from datetime import date
 from datetime import datetime
 import time
+
+
 
 url_source = 'https://agroberry.tailfb656.ts.net'
 url_destination = 'https://api.opensensemap.org/boxes/65aaa0371081050007f62301/data'
